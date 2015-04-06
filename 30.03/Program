@@ -1,0 +1,28 @@
+## сыт - full голодный - hungry спать - sleep съесть - eat убежать - run смотреть - look 
+class Lion(object): ##класс Лев
+    def __init__(self,condition): ##инициализируем переменную для состояния
+        self.condition = condition
+    def func(self):
+        who = input("Who can be seen by the lion?\n")
+        if who == "antilope" and self.condition == "full":
+            action = "Lion sleep"
+            print (action)
+        if who == "antelope" and self.condition == "hungry":
+            action = " Lion  eat"
+            print (action)
+        if who == "hunter" and self.condition == "full":
+            action = "Lion run"
+            print (action)
+        if who == "hunter" and self.condition == "hungry":
+            action = " Lion  run"
+            print (action)
+        if who == "tree" and self.condition == "full":
+            action = "Lion look"
+            print (action)
+        if who == "tree" and self.condition == "hungry":
+            action = " Lion sleep"
+            print (action)
+            
+my_lion = Lion(input("Lion is full or hungry?\n"))
+print ("Input: antelope or hunter or tree")
+my_lion.func()
