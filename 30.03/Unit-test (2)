@@ -1,0 +1,13 @@
+
+import unittest
+from unittest import TestCase
+##from program import Lion
+
+class Test(unittest.TestCase):
+    def test(self):
+
+        self.assertNotEqual(input("Lion is full or hungry?\n"), "full")
+        self.assertNotEqual(input("Lion is full or hungry?\n"), "hungry")
+        
+if __name__ == '__main__':
+    unittest.main()
