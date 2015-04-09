@@ -27,11 +27,11 @@ class TestString(unittest.TestCase):
         inputElement.send_keys("Yandex")
         try:
             driver.find_elements_by_id("cmdSubmit")
+            check = True
         except NoSuchElementException:
-            var = False
-        var = True
+           check = False
         driver.close()
-        self.assertTrue(var, 'The Element doesn't exist')
+        self.assertTrue(check, 'The Element not exists')
 
 if __name__ == '__main__':
     unittest.main()
