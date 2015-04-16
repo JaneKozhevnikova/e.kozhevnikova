@@ -9,13 +9,13 @@ class TestString(unittest.TestCase):
         self.driver = webdriver.Firefox()
         self.driver.get("http://ya.ru")
         self.driver.implicitly_wait(60)
-        self.main_page = page.MainPage(self.driver)
+        self.main_page = page1.MainPage(self.driver)
 
     def test(self):
         assert self.main_page.is_title_matches(),"Yandex title doesn't match"
         self.main_page.search_text_element = "Apps for Android"
         self.main_page.click_go_button()
-        result = page.SearchResultsPage(self.driver)
+        result = page1.SearchResultsPage(self.driver)
         assert result.is_results_found(), "No result found"
 
     def test1(self):
