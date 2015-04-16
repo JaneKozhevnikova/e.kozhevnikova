@@ -1,7 +1,7 @@
 import unittest
 from selenium.common.exceptions import NoSuchElementException
 from selenium import webdriver
-import page
+import page1
 
 class TestString(unittest.TestCase):
 
